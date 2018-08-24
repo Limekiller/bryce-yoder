@@ -84,6 +84,19 @@ body {
     opacity:0;
 }
 
+@media screen and (max-width:980px) {
+    #name {
+        text-align:center;
+        line-height:100px;
+    }
+    #subhead {
+        opacity:0 !important;
+    }
+    #home_menu {
+        flex-direction:column;
+    }
+}
+
 @keyframes blink{
     0% {opacity:0;}
     50% {opacity:1;}

@@ -2,10 +2,19 @@ body {
     background-color:black;
     color:white;
 }
+h1 {
+    font-family:Poplar;
+}
+h2, p {
+    font-family:Courier;
+}
+ul {
+    list-style:none;
+    line-height:35px;
+}
 #home_container h1 {
     font-size:750%;
     margin-bottom:0px;
-    font-family:Poplar;
     src: url('./PoplarStd.ttf');
     letter-spacing:8px;
 }
@@ -26,23 +35,37 @@ body {
     opacity:0;
     animation:fade-in 1s 3s ease-in-out forwards;
 }
-.home-menu-item:before {
+.home-div-1 {
+    display:initial;
+}
+.home-div-2 {
+    display:none;
+    width:250px;
+}
+a:before {
     opacity:0;
     content:">"; 
     transition:all 0.2s ease;
     color:#006c00;
 }
-.home-menu-item{
-    cursor:pointer;
-    transition:all 0.4s ease;
+.body_container a{
+    color:black;
 }
-.home-menu-item:hover{
+.body_container h1{
+    margin-bottom:40px;
+}
+a{
+    transition:all 0.4s ease;
+    text-decoration:none;
+    color:white;
+}
+a:hover{
     color:#006c00;
 }
-.home-menu-item:hover:before {
+a:hover:before {
     opacity:1;
 }
-.home-menu-item:after{
+a:after{
     content:'';
     top:-1px;
     left:210px;
@@ -52,7 +75,7 @@ body {
     opacity:0;
     transition:all 0.4s ease;
 }
-.home-menu-item:hover:after {
+a:hover:after {
     animation: blink 0.6s ease infinite;
     opacity:1;
 }
@@ -73,6 +96,36 @@ body {
     opacity:0;
     animation:none;
 }
+.page_heading {
+    font-family:Poplar;
+    font-size:100px;
+    padding:30px;
+    margin-bottom:-30px;
+}
+.page_subhead {
+    padding:20px;
+    font-family:Courier;
+    font-size:22px;
+}
+.body_container {
+    width:50%;
+    color:black;
+    margin:0 auto;
+    margin-top:100px;
+    background-color:white;
+    height:auto;
+}
+.body_heading {
+    font-size:80px;
+    padding:50px;
+    line-height:80px;
+}
+.body_p {
+    width:500px;
+    margin:0 auto;
+    font-size:18px;
+    line-height:35px;
+}
 #subhead {
     margin-top:-20px;
     margin-bottom:0px;
@@ -83,17 +136,40 @@ body {
     animation:fade-in 1s 2.5s ease-in-out forwards;
     opacity:0;
 }
+#split-list {
+    display:flex;
+    justify-content:space-around;
+}
+.split_list_part {
+    font-family:Courier;
+    text-decoration:none;
+    font-size:18px;
+}
 
-@media screen and (max-width:980px) {
+@media screen and (max-width:700px) {
     #name {
         text-align:center;
         line-height:100px;
     }
     #subhead {
         opacity:0 !important;
+        position:absolute;
     }
     #home_menu {
         flex-direction:column;
+        text-align:center;
+    }
+    #home_container {
+        margin-top:30vh;
+    }
+    #home_container h1 {
+        margin-bottom:-40px;
+    }
+    .home-div-1 {
+        display:none;
+    }
+    .home-div-2 {
+        display:initial;
     }
 }
 

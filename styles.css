@@ -1,6 +1,8 @@
 body {
     background-color:black;
     color:white;
+    overflow:hidden;
+    animation:delay-overflow 1s ease forwards;
 }
 h1 {
     font-family:Poplar;
@@ -12,6 +14,14 @@ h2, p {
 ul {
     list-style:none;
     line-height:35px;
+}
+::selection {
+    background: white;
+    color:black;
+}
+::-moz-selection {
+    background: white;
+    color:black;
 }
 #home_container h1 {
     font-size:750%;
@@ -66,6 +76,12 @@ a:hover{
 a:hover:before {
     opacity:1;
 }
+#contact-bar a:before {
+    display:none;
+}
+#contact-bar a:after {
+    display:none;
+}
 a:after{
     content:'';
     top:-1px;
@@ -102,19 +118,32 @@ a:hover:after {
     font-size:100px;
     padding:30px;
     margin-bottom:-30px;
+    opacity:0;
+    animation:fade-in 1s ease forwards;
 }
 .page_subhead {
     padding:20px;
     font-family:Courier;
     font-size:22px;
+    opacity:0;
+    animation:fade-in 1s ease forwards;
 }
 .body_container {
     width:50%;
     color:black;
     margin:0 auto;
-    margin-top:100px;
+    margin-top:100vh;
     background-color:white;
     height:auto;
+    animation:slide-up 0.4s ease forwards;
+}
+.body_container h1::selection, .body_container p::selection {
+    background:black;
+    color:white;
+}
+.body_container h1::-moz-selection, .body_container p::-moz-selection {
+    background:black;
+    color:white;
 }
 .body_heading {
     font-size:80px;
@@ -205,7 +234,22 @@ a:hover:after {
     100% {opacity:0;}
 }
 
+@keyframes slide-up {
+    0% {margin-top:100vh;}
+    100%{margin-top:100px;}
+}
+
+@keyframes slide-down {
+    0%{margin-top:100px;}
+    100% {margin-top:100vh;}
+}
+
+@keyframes delay-overflow {
+    0% {overflow:hidden;}
+    100%{overflow:auto;}
+}
+
 @font-face {
     font-family: 'Poplar';
-    src url("./PoplarStd.ttf");
+    src: url('PoplarStd.otf');
 }

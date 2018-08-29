@@ -4,40 +4,46 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="stylesheet" type="text/css" href="styles.css">
-    <script>
-        function selectList(e, name) {
-            var x = document.getElementsByClassName("selected");
-            for (var i =0; i < x.length; i++){
-                x[i].classList.remove("selected");
-            }
-            var y = document.getElementsByName(name);
-            for (var i=0; i < y.length; i++){
-                y[i].classList.add("selected");
-            }
-        }
-    </script>
 </head>
 
 <body>
     <h1 class='page_heading'>PROJECTS</h1>
 
     <div class='page_subhead'>
-        <span name="Animations" class='proj_select' onclick="selectList(this, this.innerHTML)" >Animations</span> 
-        | <span name="Websites" class='proj_select' onclick="selectList(this, this.innerHTML)" >Websites</span> 
-        | <span name="Other" class='proj_select selected' onclick="selectList(this, this.innerHTML)" >Other</span>
+        <span name="Animations" class='proj_select' onclick="selectList(this.innerHTML)" >Animations</span> 
+        | <span name="Websites" class='proj_select' onclick="selectList(this.innerHTML)" >Websites</span> 
+        | <span name="Games" class='proj_select' onclick="selectList(this.innerHTML)" >Games</span>
+        | <span name="Other" class='proj_select selected' onclick="selectList(this.innerHTML)" >Other</span>
     </div>
 
     <div name='Animations' style='margin:0 100;width:45%;' class='body_container proj'>
-        <h1 class='body_heading' style='width:500px;'>Cards Against Humanity</h1>
-        <p class='body_p'>asdfasdf adsf adsklfj;adsk fj;asdfadjks kfjads ;jkfadslfkjads;fj adklsfj;asdfklj as;ldfj ;adskfj ;adskjf;adskjf;adksjf;kalsj  asjdf ;kadsf ;as ads; kads; fj;adsf;asdhiuovphtrnp pfuadgps uabvpaehwrbuaep bubperspb pubf uads</p>
-        <div class='photo_container'>
-            ahh
+        <div class='project'>
+            <div style='width:100vw;height:500px;position:absolute;'></div>
+            <h1 class='body_heading' style='width:500px;'>Placeholder</h1>
+            <p class='body_p'>asdfhadsf ads;f 'asdf a;fs; dsaf'ads ;fkds;ja fadsjfaoeiw phsvahuverwf nvphaer pahu ipuvbaep bvz pabspbrew bopucvbpjuafp[e bpadfsvpbas v</p>
+            <hr />
+            <div class='photo_container'>
+            </div>
         </div>
     </div>
     <div name='Websites' style='margin:0 100;width:45%;' class='body_container proj'>
-        <h1 class='body_heading' style='width:500px;'>Cards Against Humanity</h1>
-        <p class='body_p'>asdfasdf adsf adsklfj;adsk fj;asdfadjks kfjads ;jkfadslfkjads;fj adklsfj;asdfklj as;ldfj ;adskfj ;adskjf;adskjf;adksjf;kalsj  asjdf ;kadsf ;as ads; kads; fj;adsf;asdhiuovphtrnp pfuadgps uabvpaehwrbuaep bubperspb pubf uads</p>
-        <div class='photo_container'>
+        <div class='project'>
+            <div style='width:100vw;height:500px;position:absolute;'></div>
+            <h1 class='body_heading' style='width:500px;'>Placeholder</h1>
+            <p class='body_p'>asdfhadsf ads;f 'asdf a;fs; dsaf'ads ;fkds;ja fadsjfaoeiw phsvahuverwf nvphaer pahu ipuvbaep bvz pabspbrew bopucvbpjuafp[e bpadfsvpbas v</p>
+            <hr />
+            <div class='photo_container'>
+            </div>
+        </div>
+    </div>
+    <div name='Games' style='margin:0 100;width:45%;' class='body_container proj'>
+        <div class='project'>
+            <div style='width:100vw;height:500px;position:absolute;'></div>
+            <h1 class='body_heading' style='width:500px;'>Placeholder</h1>
+            <p class='body_p'>asdfhadsf ads;f 'asdf a;fs; dsaf'ads ;fkds;ja fadsjfaoeiw phsvahuverwf nvphaer pahu ipuvbaep bvz pabspbrew bopucvbpjuafp[e bpadfsvpbas v</p>
+            <hr />
+            <div class='photo_container'>
+            </div>
         </div>
     </div>
     <div name='Other' style='margin:0 100;width:45%;' class='body_container proj selected'>
@@ -117,3 +123,15 @@
 
     
 </body>
+<script>
+    function selectList(name) {
+        var x = document.getElementsByClassName("selected");
+        while (x.length) {
+            x[0].classList.remove("selected");
+        }
+        var y = document.getElementsByName(name);
+        for (var i=0; i < y.length; i++){
+            y[i].classList.add("selected");
+        }
+    }
+</script>

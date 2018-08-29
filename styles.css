@@ -262,7 +262,7 @@ a:hover:after, .proj_select:hover:after {
         line-height:100px;
     }
     #subhead {
-        opacity:0 !important;
+        display:none;
         position:absolute;
     }
     #home_menu {

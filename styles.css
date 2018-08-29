@@ -253,6 +253,14 @@ a:hover:after, .proj_select:hover:after {
     margin-bottom:50px;
     border: 1px solid grey;
 }
+.video {
+    padding-bottom:50px;
+    position:relative;
+    width:25vw;
+    left:10vw;
+    height:315px;
+    z-index:99;
+}
 
 
 

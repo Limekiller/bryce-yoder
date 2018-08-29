@@ -256,7 +256,7 @@ a:hover:after, .proj_select:hover:after {
 
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:960px) {
     #name {
         text-align:center;
         line-height:100px;
@@ -280,6 +280,34 @@ a:hover:after, .proj_select:hover:after {
     }
     .home-div-2 {
         display:initial;
+    }
+    .body_container {
+        width:100%;
+    }
+    .body_p {
+        padding:10px;
+        width:100%;
+    }
+    .body_heading {
+        font-size:40px;
+        padding:20px;
+        line-height:40px;
+        width:100% !important;
+    }
+    .body_container h1 {
+        margin-bottom:20px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    #split-list {
+        flex-direction:column;
+    }
+    .split_list_part {
+        margin:0 auto;
+    }
+    #split-list-div {
+        display:none;
     }
 }
 

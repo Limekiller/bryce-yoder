@@ -59,6 +59,9 @@ a:hover:after, .proj_select:hover:after {
 .body_container a{
     color:black;
 }
+.body_container a:hover{
+    color:#006c00;
+}
 .body_container h1{
     margin-bottom:40px;
 }
@@ -180,7 +183,7 @@ a:hover:after, .proj_select:hover:after {
     transition:all 0.4s ease;
 }
 .contact_button:hover {
-    filter:invert(1);
+    filter:sepia(1) saturate(10) hue-rotate(72deg) brightness(0.2);
 }
 
 
@@ -201,9 +204,20 @@ a:hover:after, .proj_select:hover:after {
     transition:all 0.4s ease;
     cursor:pointer;
 }
+.project {
+    transition:all 0.4s ease;
+}
+.project:hover {
+    box-shadow:inset -8px 0px 1px #006c00;
+    transition:all 0.4s ease;
+}
 .project:hover .photo_container {
     opacity:1; 
     pointer-events:all;
+}
+.project h1 {
+    margin:0;
+    padding-top:70px;
 }
 .body_container.proj {
     transition:all 0.1s ease;

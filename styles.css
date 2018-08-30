@@ -72,13 +72,22 @@ a:hover:after, .proj_select:hover:after {
     margin-bottom:-30px;
     opacity:0;
     animation:fade-in 1s ease forwards;
+    display:inline-block;
+    margin-top:20px;
 }
-.page_subhead {
+.page_subhead, #page_select {
     padding:20px;
     font-family:Courier;
     font-size:22px;
     opacity:0;
     animation:fade-in 1s ease forwards;
+    display:block;
+}
+#page_select {
+    display:inline-block;
+    float:right;
+    margin-right:50px;
+    margin-top:20px;
 }
 .body_container {
     width:50%;

@@ -7,6 +7,10 @@
 </head>
 
 <body>
+    <div id='page_select'>
+        <a href='about.html'>About</a>|
+        <a href='contact.html'>Contact</a>
+    </div>
     <h1 class='page_heading'>PROJECTS</h1>
 
     <div class='page_subhead'>
@@ -16,7 +20,7 @@
         | <span name="Other" class='proj_select selected' onclick="selectList(this.innerHTML)" >Other</span>
     </div>
 
-    <div name='Animations' style='margin:0 100;width:45%;' class='body_container proj'>
+    <div name='Animations' style='margin:0 100;width:45%; display:none;' class='body_container proj'>
         <div class='project'>
             <div style='width:100vw;height:500px;position:absolute;'></div>
             <h1 class='body_heading' style='width:500px;'>A Trump Presidency</h1>
@@ -130,7 +134,7 @@
     </div>
 
 
-    <div name='Websites' style='margin:0 100;width:45%;' class='body_container proj'>
+    <div name='Websites' style='margin:0 100;width:45%;display:none;' class='body_container proj'>
 
         <div class='project'>
             <div style='width:100vw;height:500px;position:absolute;'></div>
@@ -174,7 +178,7 @@
     </div>
 
 
-    <div name='Games' style='margin:0 100;width:45%;' class='body_container proj'>
+    <div name='Games' style='margin:0 100;width:45%;display:none;' class='body_container proj'>
 
         <div class='project'>
             <div style='width:100vw;height:500px;position:absolute;'></div>
@@ -189,6 +193,9 @@
             </ul>
             <hr />
             <div class='photo_container'>
+                <img src='./images/cah1.png' />
+                <img src='./images/cah2.png' />
+                <img src='./images/cah3.png' />
             </div>
         </div>
     </div>
@@ -263,10 +270,15 @@
     function selectList(name) {
         var x = document.getElementsByClassName("selected");
         while (x.length) {
+            if (x[0].tagName.toLowerCase() != 'span'){
+                console.log(x[0].tagName);
+                x[0].style.display='none';
+            }
             x[0].classList.remove("selected");
         }
         var y = document.getElementsByName(name);
         for (var i=0; i < y.length; i++){
+            y[i].style.display = 'initial';
             y[i].classList.add("selected");
         }
     }

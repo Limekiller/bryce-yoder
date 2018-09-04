@@ -75,6 +75,7 @@ a:hover:after, .proj_select:hover:after {
     animation:fade-in 1s ease forwards;
     display:inline-block;
     margin-top:20px;
+    padding-bottom:0px;
 }
 .page_subhead, #page_select {
     padding:20px;
@@ -222,7 +223,8 @@ a:hover:after, .proj_select:hover:after {
     transition:all 0.4s ease;
 }
 .project:hover .photo_container {
-    opacity:1; 
+    /*opacity:1; */
+    animation:slide-up-p 0.4s ease forwards;
     pointer-events:all;
 }
 .project h1 {
@@ -253,8 +255,8 @@ a:hover:after, .proj_select:hover:after {
     pointer-events:none;
     right:3vw;
     height:100%;
-    opacity:0;
-    transition:all 0.4s ease;
+    margin-top:-110vh;
+    animation:slide-off-p 0.4s ease;
     padding-top:20px;
 }
 .photo_container img {
@@ -323,8 +325,10 @@ a:hover:after, .proj_select:hover:after {
         margin:0 !important;
     }
     .photo_container {
+        animation:none;
         position:static;
         opacity:1;
+        margin-top:0px;
         width:100%;
     }
     .photo_container_icon{
@@ -343,6 +347,9 @@ a:hover:after, .proj_select:hover:after {
     }
     .project {
         box-shadow:none !important;
+    }
+    .project:hover .photo_container {
+        animation:none;
     }
 }
 
@@ -382,6 +389,16 @@ a:hover:after, .proj_select:hover:after {
 @keyframes slide-down {
     0%{margin-top:100px;}
     100% {margin-top:100vh;}
+}
+
+@keyframes slide-up-p {
+    0% {margin-top:100vh;}
+    100%{margin-top:0px;}
+}
+
+@keyframes slide-off-p {
+    0% {margin-top:0px;}
+    100%{margin-top:-110vh;}
 }
 
 @keyframes delay-overflow {

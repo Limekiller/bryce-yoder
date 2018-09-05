@@ -242,9 +242,9 @@
             </ul>
             <div class='photo_container'onclick='spoiler(this)'>
                 <p class='photo_container_icon'>+</p>
+                <img src='./images/bms3.png' />
                 <img src='./images/bms1.png' />
                 <img src='./images/bms2.png' />
-                <img src='./images/bms3.png' />
                 <img src='./images/bms4.png' />
                 <img src='./images/bms5.png' />
             </div>
@@ -274,20 +274,39 @@
     
 </body>
 <script>
+    window.onload = function(){
+        x = document.getElementsByClassName("photo_container");
+        window.setTimeout(function() {
+            for (i=0;i<x.length;i++){
+                x[i].style.opacity = 1;
+            }
+        }, 250);
+    }
+
     function selectList(name) {
+
+        handleAnimation();
         var x = document.getElementsByClassName("selected");
         while (x.length) {
             if (x[0].tagName.toLowerCase() != 'span'){
-                console.log(x[0].tagName);
-                x[0].style.display='none';
+                (function() {
+                    var j = x[0];
+                    j.style.animation='slide-down 0.4s ease forwards';
+                    window.setTimeout(function(){
+                        j.style.display='none';
+                    }, 500);
+                })();
             }
             x[0].classList.remove("selected");
         }
         var y = document.getElementsByName(name);
-        for (var i=0; i < y.length; i++){
-            y[i].style.display = 'initial';
-            y[i].classList.add("selected");
-        }
+        window.setTimeout(function(){
+            for (var i=0; i < y.length; i++){
+                y[i].style.display = 'initial';
+                y[i].style.animation='slide-up 0.4s ease forwards';
+                y[i].classList.add("selected");
+            }
+        }, 500);
     }
 
     function spoiler(e) {
@@ -308,5 +327,16 @@
                 e.children[i].classList.add('show');
             }
         }
+    }
+    function handleAnimation() {
+        x = document.getElementsByClassName("photo_container");
+        for (var i=0;i<x.length;i++){
+            x[i].style.opacity = 0;
+        }
+        window.setTimeout(function(){
+            for (var i=0;i<x.length;i++){
+                x[i].style.opacity = 1;
+            }
+        }, 1000);
     }
 </script>

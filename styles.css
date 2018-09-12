@@ -350,6 +350,9 @@ a:hover:after, .proj_select:hover:after {
     .project:hover .photo_container {
         animation:none;
     }
+    #contact-bar {
+        width:95%;
+    }
 }
 
 @media screen and (max-width:460px) {

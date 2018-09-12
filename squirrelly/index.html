@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Squirrelly: A GC Odyssey</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body id='body'>
+    <div id='page_container'>
+        <div id='headline'>
+            <h1 style='color:#49176e;'>Squirrelly</h1>
+            <h2 style='font-size:30px;'>A GC Odyssey</h2>
+        </div>
+        <div id='body'>
+            <div id='copy'>
+                <h2>Art of the squirrel</h2>
+                <p>Explore the Goshen campus from the view of a squirrel. Collect as many acorns as possible, and avoid the golf cart!</p>
+                <p>WASD to move. Mouse to look around. Space to dodge-roll, a la Dark Souls. Invert the Y Axis in the options.</p>
+                <ul>
+                    <li>Fully realized 3D campus</li>
+                    <li>Fast-paced gameplay</li>
+                    <li>Music streamed straight from 91.1 The Globe </li>
+                    <li>Responsive controls</li>
+                </ul>
+                <p>This game is still in development and receiving updates. Expect bugs and general unfinished-ness. More features coming soon, hopefully including:</p>
+                <ul>
+                    <li>Controller support</li>
+                    <li>Global leaderboards</li>
+                    <li>Fleshed-out gameplay (failure states, sprint button...)</li>
+                    <li>4-person local multiplayer</li>
+                </ul>
+            </div>
+            <div id='video'>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PkTeMxAbagE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+        <button onClick='window.location.href="squirrelly.zip"'>Download for Windows</button>
+        <button>Download for Mac</button>
+        <p>Simply unzip to a folder and play!</p>
+    </div>
+</body>
+<script>
+    window.onload = function() {
+        window.setTimeout(function(){document.getElementById('body').style.overflow = 'auto';}, 5000);
+    };
+</script>

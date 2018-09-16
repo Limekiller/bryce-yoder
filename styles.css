@@ -133,9 +133,7 @@ a:hover:after, .proj_select:hover:after {
 #home_container {
     margin:0 auto;
     margin-top:40vh;
-    width:-moz-fit-content;
-    width:-webkit-fit-content;
-    width:fit-content;
+    width:662px;
 }
 #home_menu {
     display:flex;	
@@ -161,8 +159,6 @@ a:hover:after, .proj_select:hover:after {
 #name:after {
     animation: blink 0.6s ease infinite;
     content:'';
-    top:-1px;
-    left:210px;
     width:0;
     height:0;
     border-left:15px solid #ffffff;
@@ -293,6 +289,7 @@ a:hover:after, .proj_select:hover:after {
         text-align:center;
     }
     #home_container {
+        width:100%;
         margin-top:30vh;
     }
     #home_container h1 {

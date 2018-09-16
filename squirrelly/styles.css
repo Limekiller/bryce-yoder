@@ -82,6 +82,33 @@ button:hover::before {
     margin-right:20px;
 }
 
+@media screen and (max-width:960px) {
+    #headline {
+        font-size:6vw;
+    }
+    #body {
+        flex-direction:column;
+    }
+    #copy {
+        width:75vw;
+    }
+    #headline h2 {
+        font-size:4vw !important;
+        margin-top:5vw;
+        margin-left:45vw;
+        float:none;
+    }
+    button {
+        margin-top:100px;
+    }
+    #video {
+        text-align:left;
+    }
+    #video_iframe {
+        width:75vw !important;
+    }
+}
+
 @keyframes blur {
     from {filter:blur(0px);}
     to {filter:blur(8px);}

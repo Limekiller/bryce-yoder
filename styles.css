@@ -7,12 +7,16 @@ body {
     animation:delay-overflow 1s ease forwards;*/
     margin:0;
 }
+hr {
+    margin-bottom:20px;
+    animation:fade-in 1s 2s ease backwards;
+}
 h1 {
     font-family:Poplar;
     font-weight:normal;
 }
 h2, p {
-    font-family:Courier;
+    font-family:Akkurat, Courier;
 }
 ul {
     list-style:none;
@@ -75,10 +79,11 @@ a:hover:after, .proj_select:hover:after {
     display:inline-block;
     margin-top:20px;
     padding-bottom:0px;
+    transition: all 0.4s ease;
 }
 .page_subhead, #page_select {
     padding:20px;
-    font-family:Courier;
+    font-family:Akkurat, Courier;
     font-size:22px;
     opacity:0;
     animation:fade-in 1s ease forwards;
@@ -89,6 +94,7 @@ a:hover:after, .proj_select:hover:after {
     float:right;
     margin-right:50px;
     margin-top:20px;
+    transition:color 0.4s ease;
 }
 .body_container {
     width:50%;
@@ -109,14 +115,15 @@ a:hover:after, .proj_select:hover:after {
     margin:0 auto;
     font-size:18px;
     line-height:35px;
-    font-family:Courier;
+    font-family:Akkurat, Courier;
 }
 #subhead {
     margin-top:-20px;
     margin-bottom:0px;
     text-align:center;
-    font-size:200%;
-    font-family:Courier;
+    font-size:190%;
+    font-family:Akkurat, Courier;
+    font-weight:normal;
     letter-spacing:2px;
     animation:fade-in 1s 2.5s ease-in-out forwards;
     opacity:0;
@@ -138,9 +145,8 @@ a:hover:after, .proj_select:hover:after {
 #home_menu {
     display:flex;	
     justify-content:space-between;
-    font-size:200%;
-    font-family:Courier New;
-    font-weight:bold;
+    font-size:150%;
+    font-family:Akkurat, Courier New;
     letter-spacing:2px;
     opacity:0;
     animation:fade-in 1s 3s ease-in-out forwards;
@@ -199,7 +205,7 @@ a:hover:after, .proj_select:hover:after {
     justify-content:space-around;
 }
 .split_list_part {
-    font-family:Courier;
+    font-family:Akkurat, Courier;
     text-decoration:none;
     font-size:18px;
 }
@@ -408,4 +414,9 @@ a:hover:after, .proj_select:hover:after {
 @font-face {
     font-family: 'Poplar';
     src: url('PoplarStd.otf');
+}
+
+@font-face {
+    font-family: 'Akkurat';
+    src: url('AKKURAT-Mono.OTF');
 }

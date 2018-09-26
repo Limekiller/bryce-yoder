@@ -4,12 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="global.js"></script>
 </head>
 
 <body>
     <div id='page_select'>
-        <a href='about.html'>About</a>|
-        <a href='contact.html'>Contact</a>
+        <a href='javascript:goToURL("about.html")'>About</a>|
+        <a href='javascript:goToURL("contact.html")'>Contact</a>
     </div>
     <h1 class='page_heading'>PROJECTS</h1>
 
@@ -206,6 +207,42 @@
                 <img src='./images/sq4.png' />
                 <img src='./images/sq5.png' />
                 <img src='./images/sq6.png' />
+            </div>
+            <hr />
+        </div>
+        <div class='project'>
+            <div style='width:100vw;height:500px;position:absolute;'></div>
+            <h1 class='body_heading' style='width:500px;'>Radio Control</h1>
+            <p class='body_p'>Global Game Jam 2018 -- theme was "transmissions." We combined the car and the radio variety for a game where the car radio controls the steering, but only one station will give you navigational instructions. Rotate the mouse left or right to turn, and balance navigation with an ever-changing radio to find where to go.</p>
+            <p style='position:relative;z-index:99;text-align:center;font-weight:bold;'><a target="_blank" href='https://globalgamejam.org/2018/games/radio-control'>Check it out!</a></p>
+            <ul class='body_p' style='margin-top:20px;padding-bottom:50px;'><strong>Features:</strong>
+                <li>Creative control scheme</li>
+                <li>Interesting audio-based gameplay</li>
+                <li>Lots of stations to listen to :D</li>
+            </ul>
+            <div class='photo_container'onclick='spoiler(this)'>
+                <p class='photo_container_icon'>+</p>
+                <img src='./images/rc1.png' />
+                <img src='./images/rc2.png' />
+                <img src='./images/rc3.png' />
+            </div>
+            <hr />
+        </div>
+        <div class='project'>
+            <div style='width:100vw;height:500px;position:absolute;'></div>
+            <h1 class='body_heading' style='width:500px;'>Soundwaves</h1>
+            <p class='body_p'>Created for the Global Game Jam 2017 -- the theme was "waves". We created a tech demo for a first-person exploration game entirely in the dark, navigated only by soundwaves. I began fleshing this out into a full game in my free time, but being the only person working on the project, it took up far too much time. I may return to it someday.</p>
+            <p style='position:relative;z-index:99;text-align:center;font-weight:bold;'><a target="_blank" href='https://globalgamejam.org/2017/games/soundwaves'>Check it out!</a></p>
+            <ul class='body_p' style='margin-top:20px;padding-bottom:50px;'><strong>Features:</strong>
+                <li>Unique exploration mechanics</li>
+                <li>Navigate via light and sound</li>
+                <li>Immersive sound design</li>
+            </ul>
+            <div class='photo_container'onclick='spoiler(this)'>
+                <p class='photo_container_icon'>+</p>
+                <img src='./images/sw1.png' />
+                <img src='./images/sw2.png' />
+                <img src='./images/sw3.png' />
             </div>
             <hr />
         </div>
